@@ -1,6 +1,6 @@
 ***L5.2Scaffold***
 
-Com a finalidade de servir de base para novos projetos em Laravel e modularizados, o L5.2Scalfold
+O L5.2Scalfold tem a finalidade de servir de base para novos projetos modulares com Laravel.
 
 Esse o projeto usa o [nwidart/laravel-modules](https://github.com/nWidart/laravel-modules), para modularização.
 
