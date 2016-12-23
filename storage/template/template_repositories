@@ -1,0 +1,11 @@
+<?php
+
+namespace Modules\[MODULE]\Repositories;
+
+use Modules\[MODULE]\Entities\[MODEL];
+use Illuminate\Support\Facades\DB;
+
+class [ENTITY]Repository
+{
+    [CODE]
+}

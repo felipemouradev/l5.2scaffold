@@ -1,0 +1,17 @@
+<?php
+
+namespace Modules\[MODULE]\Entities;
+
+use Illuminate\Database\Eloquent\Model;
+
+class [MODEL] extends Model
+{
+    protected $table=[TABLE]
+    protected $primaryKey='[PRIMARY_KEY]';
+    protected $fillable=[FIELDS]
+    public $timestamps = false;
+
+    [CODE]
+
+    [VALIDADE]
+}

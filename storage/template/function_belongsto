@@ -1,0 +1,4 @@
+    public function [FOREING_MODEL]()
+    {
+        return $this->belongsTo('\Modules\[MODULE]\Entities\[FOREING_MODEL]');
+    }

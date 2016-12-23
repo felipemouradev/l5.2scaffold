@@ -1,0 +1,57 @@
+
+    //retorna id(number) ou array caso algo de errado
+    public function store($data,$exeception = null){
+        $message = null;
+        $model = new [MODEL]();
+        $validate = $model->validate($data,$exeception);
+        if(is_array($validate)) return $validate;
+        try {
+            DB::beginTransaction();
+            $data = $model->create($data);
+            DB::commit();
+            return $data->[PRIMARY_KEY];
+        } catch(\Exception $e) {
+            DB::rollback();
+            return ['message'=>$e->getMessage()];
+        }
+    }
+
+    //retorna id(number) ou array caso algo de errado
+    public function update($id,$data,$exeception = null){
+        $message = null;
+        $model = new [MODEL]();
+        $validate = $model->validate($data,$exeception);
+        if(is_array($validate)) return $validate;
+        try {
+            DB::beginTransaction();
+            $data = $model->where('[PRIMARY_KEY]',$id)->update($data);
+            DB::commit();
+            return true;
+        } catch(\Exception $e) {
+            DB::rollback();
+            return ['message'=>$e->getMessage()];
+        }
+    }
+
+    //retorna true ou array caso algo de errado
+    public function delete($id){
+        $message = null;
+        $model = new [MODEL]();
+        if(is_null($id)) return ['message'=>'id não pode ser nulo'];
+        try {
+            DB::beginTransaction();
+            $data = $model->where('[PRIMARY_KEY]',$id)->delete($id);
+            DB::commit();
+            return true;
+        } catch(\Exception $e) {
+            DB::rollback();
+            return ['message'=>$e->getMessage()];
+        }
+    }
+
+    //retorna o builder de um model
+    public function builder()
+    {
+        $model = new [MODEL]();
+        return $model;
+    }

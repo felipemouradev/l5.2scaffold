@@ -1,0 +1,8 @@
+
+    //Rotas para [TABLE]
+    Route::get('/[TABLE]', '[MODEL]Controller@index');
+    Route::post('/[TABLE]/store', '[MODEL]Controller@store');
+    Route::post('/[TABLE]/update/{id}','[MODEL]Controller@update');
+    Route::get('/[TABLE]/destroy/{id}','[MODEL]Controller@destroy');
+
+    //[CODE]

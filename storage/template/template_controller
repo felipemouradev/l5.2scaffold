@@ -1,0 +1,13 @@
+<?php
+
+namespace Modules\[MODULE]\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Routing\Controller;
+use Modules\[MODULE]\Repositories\[MODEL]Repository;
+
+class [MODEL]Controller extends Controller
+{
+    [CODE]
+}
